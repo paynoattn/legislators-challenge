@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "outDir": "./dist",
+    "experimentalDecorators": true
+  },
+  "files": [
+    "./src/index.ts"
+  ]
+}
