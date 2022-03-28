@@ -30,14 +30,6 @@ const grabYamlFile = async (filename: string): Promise<Representative[]> => {
   return jsYaml.load(fileBuffer) as Representative[];
 }
 
-const createSlowHistogram = (representatives: Representative[]) => {
-  YEARS.forEach(y => {
-    const yearDate = new Date(`${y}/01/01`);
-    const filtered = representatives.filter(r => r.bio.gender === 'F' && r.terms.find(t => isTermInYear(yearDate, t) ));
-    console.log(y, filtered.length);
-  })
-}
-
 const createHistogram = (representatives: Representative[]) => {
   // put all female representatives' terms in a single array
   const terms = representatives
